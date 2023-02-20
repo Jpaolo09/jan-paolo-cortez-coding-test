@@ -25,6 +25,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'price' => 'required|numeric|regex:/^[0-9]*(\.[0-9]{0,2})?$/', // I used regex because for some reason decimal validation is not available, maybe the project was created with a lower version of laravel
+        ]);
+
         return Product::create($request->all());
     }
 
