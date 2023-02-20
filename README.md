@@ -114,4 +114,4 @@ For bonus points, answer the question below by updating this file.
 Q: The management requested a new feature where in the fictional e-commerce app must have a "featured products" section.
 How would you go about implementing this feature in the backend?
 
-A: _Put your answer here_
+A: If I were to implement this feature, I would just add a new boolean column in the products table called is_featured so I can simply query the products where is_featured is set to true. I think it's simple yet effective.
